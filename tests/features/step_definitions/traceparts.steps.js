@@ -12,6 +12,10 @@ When(/^user search for keyword (.*)$/, (searchkey) => {
     home.enterTextinSearch(searchkey);
 });
 
+When(/^user verify product Title$/, () => {
+    home.verifyProductTitle()
+});
+
 When(/^user selects product from product listing page$/, () => {
     home.selectProduct();
 });

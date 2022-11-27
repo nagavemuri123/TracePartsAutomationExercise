@@ -35,13 +35,14 @@ class sampleHomePage extends NativePage {
 
   }
 
-  verifyProductDescription(actualtext){
-
+  verifyProductTitle(){
     const title = $(this.tracepartPageElement.title);
     const header = title.getText();
     console.log(header);
-    assert.equal(header, tracepartsHomePageData['title'])
+    assert.equal(header, tracepartsHomePageData['title']) 
+  }
 
+  verifyProductDescription(actualtext){
     const model = $(this.tracepartPageElement.model)
       model.waitForDisplayed();
       const text = model.getText();
